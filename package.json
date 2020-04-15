@@ -1,0 +1,24 @@
+{
+  "name": "starwarsCatina",
+  "version": "1.0.0",
+  "description": "Restaurant Reservation App",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmejares/starwarsCatina.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mmejares/starwarsCatina/issues"
+  },
+  "homepage": "https://github.com/mmejares/starwarsCatina#readme",
+  "dependencies": {
+    "inquirer": "^7.1.0"
+  }
+}
