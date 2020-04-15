@@ -67,5 +67,15 @@
     </div>
 
 </body>
-
+<script>
+    $("#add-btn").on("click", function(event) {
+      event.preventDefault();
+      var newCharacter = {
+        name: $("#reserve_name").val().trim(),
+        phone: $("#reserve_phone").val().trim(),
+        email: $("#reserve_email").val().trim(),
+        uniqueID: $("#reserve_uniqueID").val().trim()
+      };
+    })
+</script>
 </html>
