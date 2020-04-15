@@ -16,14 +16,64 @@ app.use(express.json());
 // =============================================================
 var reservetable = [
   {
-    routename: "jengofett",
+    routename: "table1",
     partyName: "Jengo",
-    partyNum: 2
+    partyNum: 2,
+    occupied: false
   },
   {
-    routeName: "obiwankenobi",
+    routeName: "table2",
     partyName: "Ben",
-    partyNum: 2
+    partyNum: 6,
+    occupied: false
+  },
+  {
+    routename: "table3",
+    partyName: "Vader",
+    partyNum: 5,
+    occupied: false
+  },
+  {
+    routename: "table4",
+    partyName: "Ewok",
+    partyNum: 6,
+    occupied: false
+  },
+  {
+    routename: "table5",
+    partyName: "Maul",
+    partyNum: 1,
+    occupied: false
+  },
+  {
+    routename: "table6",
+    partyName: "Revan",
+    partyNum: 3,
+    occupied: false
+  },
+  {
+    routeName: "table7",
+    partyName: "Ben",
+    partyNum: 6,
+    occupied: false
+  },
+  {
+    routename: "table8",
+    partyName: "Vader",
+    partyNum: 5,
+    occupied: false
+  },
+  {
+    routename: "table9",
+    partyName: "Ewok",
+    partyNum: 6,
+    occupied: false
+  },
+  {
+    routename: "table10",
+    partyName: "Maul",
+    partyNum: 1,
+    occupied: false
   }
 ];
   // Routes
@@ -31,17 +81,23 @@ var reservetable = [
 
 // Basic route that sends the user first to the AJAX Page
 app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "view.html"));
+    res.sendFile(path.join(__dirname, "home.html"));
   });
   
-  app.get("/reservation", function(req, res) {
-    res.sendFile(path.join(__dirname, "reservation.html"));
-  });
+//displays reservation page
+app.get("/reservation", function(req, res) {
+  res.sendFile(path.join(__dirname, "reservation.html"));
+});
+
+//displays view tables page
+app.get("/view", function (req, res) {
+  res.sendFile(path.join(__dirname, "view.html"));
+})
   
-  // Displays all tables
-  app.get("/api/reservetable", function(req, res) {
-    return res.json(reservetable);
-  });
+// Displays all tables
+app.get("/api/reservetable", function(req, res) {
+  return res.json(reservetable);
+});
 
   // Displays a single character, or returns false
     app.get("/api/reservetable/:table", function(req, res) {
