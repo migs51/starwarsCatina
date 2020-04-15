@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/mmejares/starwarsCatina#readme",
   "dependencies": {
+    "express": "^4.17.1",
     "inquirer": "^7.1.0"
   }
 }

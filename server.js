@@ -31,17 +31,23 @@ var reservetable = [
 
 // Basic route that sends the user first to the AJAX Page
 app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "view.html"));
+    res.sendFile(path.join(__dirname, "home.html"));
   });
   
-  app.get("/reservation", function(req, res) {
-    res.sendFile(path.join(__dirname, "reservation.html"));
-  });
+//displays reservation page
+app.get("/reservation", function(req, res) {
+  res.sendFile(path.join(__dirname, "reservation.html"));
+});
+
+//displays view tables page
+app.get("/view", function (req, res) {
+  res.sendFile(path.join(__dirname, "view.html"));
+})
   
-  // Displays all tables
-  app.get("/api/reservetable", function(req, res) {
-    return res.json(reservetable);
-  });
+// Displays all tables
+app.get("/api/reservetable", function(req, res) {
+  return res.json(reservetable);
+});
 
   // Displays a single character, or returns false
     app.get("/api/reservetable/:table", function(req, res) {
