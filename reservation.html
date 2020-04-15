@@ -17,7 +17,7 @@
             <h1>Star Wars Cantina</h1>
             <h3>Make a reservation today!</h3>
             <hr>
-            <button class="btn btn-danger btn-lg"><span class="fa fa-plus"></span> View Tables</button>
+            <button class="btn btn-danger btn-lg"><span class="fas fa-arrow-alt-circle-right"></span> View Tables</button>
         </div>
         <div class="row">
 
@@ -53,7 +53,7 @@
                                 <input type="text" class="form-control" id="reserve_uniqueID">
                             </div>
 
-                            <button type="submit" class="btn btn-primary submit">Submit</button>
+                            <button type="submit" class="btn btn-primary submit" id="add-btn">Submit</button>
                         </form>
 
                     </div>
@@ -66,5 +66,22 @@
     </div>
 
 </body>
+<script type="text/javascript">
+    $("#add-btn").on("click", function(event) {
+      event.preventDefault();
+      var newReservation = {
+        name: $("#reserve_name").val().trim(),
+        phone: $("#reserve_phone").val().trim(),
+        email: $("#reserve_email").val().trim(),
+        uniqueID: $("#reserve_uniqueID").val().trim()
+      };
+      $.post("/api/reservetable", newReservation)
+        .then(function(data) {
+          console.log("reservation.html", data);
+          alert("Adding reservation...");
+        });
+    })
 
+    
+</script>
 </html>
