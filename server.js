@@ -16,14 +16,64 @@ app.use(express.json());
 // =============================================================
 var reservetable = [
   {
-    routename: "jengofett",
+    routename: "table1",
     partyName: "Jengo",
-    partyNum: 2
+    partyNum: 2,
+    occupied: false
   },
   {
-    routeName: "obiwankenobi",
+    routeName: "table2",
     partyName: "Ben",
-    partyNum: 2
+    partyNum: 6,
+    occupied: false
+  },
+  {
+    routename: "table3",
+    partyName: "Vader",
+    partyNum: 5,
+    occupied: false
+  },
+  {
+    routename: "table4",
+    partyName: "Ewok",
+    partyNum: 6,
+    occupied: false
+  },
+  {
+    routename: "table5",
+    partyName: "Maul",
+    partyNum: 1,
+    occupied: false
+  },
+  {
+    routename: "table6",
+    partyName: "Revan",
+    partyNum: 3,
+    occupied: false
+  },
+  {
+    routeName: "table7",
+    partyName: "Ben",
+    partyNum: 6,
+    occupied: false
+  },
+  {
+    routename: "table8",
+    partyName: "Vader",
+    partyNum: 5,
+    occupied: false
+  },
+  {
+    routename: "table9",
+    partyName: "Ewok",
+    partyNum: 6,
+    occupied: false
+  },
+  {
+    routename: "table10",
+    partyName: "Maul",
+    partyNum: 1,
+    occupied: false
   }
 ];
   // Routes
