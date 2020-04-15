@@ -1,3 +1,19 @@
+# starwarsCatina
+
+Restaurant Reservation App
+
+# Dear Patrons!
+
+Welcome to the Star Wars Cantina! We serve food to all members of the
+Galaxy. No matter what corner of the galaxy you come from, you can 
+reserve a table at our cantina today! 
+
+Note: We currently only have 10 tables with seating up to 6, bar
+patrons do not need a reservation.
+
+Click the link below to get started:
+[MAKE A RESERVATION](#)
+
 # Development Phases
 
 ## Initial Instructions
